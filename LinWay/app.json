@@ -17,15 +17,21 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "凌威"
+        "text": "凌威",
+        "iconPath": "images/凌威灰色.png",
+        "selectedIconPath": "images/凌威红色.png"
       },
       {
         "pagePath": "pages/index/index",
-        "text": "产品"
+        "text": "产品",
+        "iconPath": "images/product_gray.png",
+        "selectedIconPath": "images/product_red.png"
       },
       {
         "pagePath": "pages/index/index",
-        "text": "联系"
+        "text": "联系",
+        "iconPath": "images/smile_gray.png",
+        "selectedIconPath": "images/smile_red.png"
       }
     ],
     "position": "bottom"
