@@ -1,2 +1,50 @@
 <!--pages/product/product.wxml-->
-<text>pages/product/product.wxml</text>
+<view class='lower'>
+  <block wx:for="{{brands}}" wx:key="id">
+    <view class="lower_item {{curId == item.id ? 'active' : ''}}" bindtap='switchBrand' data-index="{{index}}" data-id="{{item.id}}">
+      {{item.name}}
+    </view>
+  </block>
+</view>
+
+<view class="upper {{open ? 'shift' : ''}}">
+  <view class='head'>
+    <image class='nav_switch' src='/images/nav_switch.png' mode='widthFix' bindtap='tap_nav_switch'></image>
+    <view class='nav_title'>
+      {{brands[curIndex].name}}
+    </view>
+  </view>
+
+  <scroll-view scroll-y class='scroll_body'>
+    <view class='body'>
+      <view class='item'>1</view>
+      <view class='item'>2</view>
+      <view class='item'>3</view>
+      <view class='item'>4</view>
+      <view class='item'>5</view>
+      <view class='item'>1</view>
+      <view class='item'>2</view>
+      <view class='item'>3</view>
+      <view class='item'>4</view>
+      <view class='item'>5</view>
+      <view class='item'>1</view>
+      <view class='item'>2</view>
+      <view class='item'>3</view>
+      <view class='item'>4</view>
+      <view class='item'>5</view>
+      <view class='item'>1</view>
+      <view class='item'>2</view>
+      <view class='item'>3</view>
+      <view class='item'>4</view>
+      <view class='item'>5</view>
+      <view class='item'>1</view>
+      <view class='item'>2</view>
+      <view class='item'>3</view>
+      <view class='item'>4</view>
+      <view class='item'>5</view>
+    </view>
+    
+  </scroll-view>
+
+  
+</view>

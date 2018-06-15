@@ -1,1 +1,121 @@
 /* pages/product/product.wxss */
+.lower {
+  position: fixed;
+  width: 35%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+
+  padding-top: 7%;
+  
+  background-color: #f5f5f5;
+  color: #939393;
+}
+
+.lower .lower_item {
+  padding-left: 5%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+
+  width: 70%;
+
+  overflow: hidden;
+
+  font-size: large;
+
+  border-bottom: solid;
+  border-color: #dbdbdb;
+}
+
+.lower .lower_item.active {
+  background-color: #ffffff;
+}
+
+.upper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  
+  background-color: #ffffff;
+  color: #000000;
+
+  transition: All 0.4s ease; 
+  -webkit-transition: All 0.4s ease;
+}
+
+.upper .head {
+  align-items: center;
+  justify-content: center;
+
+  background-color: #f5f5f5;
+  color: #000000;
+}
+
+.upper .head .nav_switch {
+  position: absolute;
+  width: 10%;
+  height: 10%;
+}
+
+.upper .head .nav_title {
+  width: 100%;
+  height: 10%;
+
+  font-style: normal;
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+}
+
+.upper.shift {
+  transform: rotate(0deg) scale(1) translate(25%,0%);
+  -webkit-transform: rotate(0deg) scale(1) translate(25%,0%); 
+}
+
+.upper .scroll_body{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  width: 100%;
+  height: 90%;
+
+  scroll-top: 0;
+}
+
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.upper .body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  justify-content: flex-start;
+  align-content: flex-start;
+
+  border-style: solid;
+}
+
+.upper .item {
+  width: 215rpx;
+  height: 250rpx;
+
+  padding: 10rpx;
+
+
+  border-style: solid;
+}
