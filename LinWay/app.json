@@ -8,5 +8,26 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#1296db",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "凌威"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "产品"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "联系"
+      }
+    ],
+    "position": "bottom"
   }
 }
