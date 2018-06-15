@@ -1,1 +1,47 @@
 /* pages/contact/contact.wxss */
+.head_image {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0rpx;
+  padding-left: 5rpx;
+  padding-right: 5rpx;
+  margin: 0rpx;
+}
+
+.item_key {
+  font-style: italic;
+  font-weight: bold;
+  font-size: larger;
+  width: 100%;
+}
+
+.item_value {
+  font-style: normal;
+  font-weight: normal;
+  font-size: medium;
+  margin-left: 10%;
+  margin-bottom: 3%;
+  width: 85%;
+  word-break: break-all;
+}
+
+.foot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.foot_text {
+  font-style: normal;
+  font-weight: bold;
+  font-size: larger;
+  color: red;
+}

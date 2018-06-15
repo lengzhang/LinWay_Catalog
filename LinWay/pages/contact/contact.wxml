@@ -1,2 +1,11 @@
 <!--pages/contact/contact.wxml-->
-<text>pages/contact/contact.wxml</text>
+<image  class='head_image' src='https://linway-1256311343.cos.ap-guangzhou.myqcloud.com/contact/contact_us.jpg' mode='widthFix'></image>
+
+<view class='container' wx:for="{{list}}" wx:key="key">
+  <text class='item_key'>{{item.key}}</text>
+  <text class='item_value' selectable="{{selectable}}">{{item.value}}</text>
+</view>
+
+<view class='foot'>
+  <text class='foot_text'>请将网址复制到浏览器</text>
+</view>
