@@ -29,10 +29,40 @@ App({
         series:[
           {
             series_id:0,
-            series_name: '',
-            items: {
-              
-            }
+            series_name: '沙拉酱系列',
+            items: [
+              {
+                item_id: 0,
+                item_name: ''
+              },
+              {
+
+              }
+            ]
+          },
+          {
+            series_id: 1,
+            series_name: '番茄酱系列',
+            items: [
+              {
+
+              },
+              {
+
+              }
+            ]
+          },
+          {
+            series_id: 2,
+            series_name: '风味酱系列',
+            items: [
+              {
+
+              },
+              {
+
+              }
+            ]
           }
         ]
       },
