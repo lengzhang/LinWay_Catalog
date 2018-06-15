@@ -1,13 +1,16 @@
 <!--pages/product/product.wxml-->
 <view class='lower'>
-  <block wx:for="{{brands}}" wx:key="id">
-    <view class="lower_item {{curId == item.id ? 'active' : ''}}" bindtap='switchBrand' data-index="{{index}}" data-id="{{item.id}}">
-      {{item.name}}
-    </view>
-  </block>
+  <scroll-view scroll-y class='lower_scroll'>
+    <view class="lower_item"></view>
+    <block wx:for="{{brands}}" wx:key="id">
+      <view class="lower_item {{curId == item.id ? 'active' : ''}}" bindtap='switchBrand' data-index="{{index}}" data-id="{{item.id}}">
+        {{item.name}}
+      </view>
+    </block>
+  </scroll-view>
 </view>
 
-<view class="upper {{open ? 'shift' : ''}}">
+<view class="upper {{open ? 'shift' : ''}}" bindtap="{{open ? 'close_nav' : ''}}">
   <view class='head'>
     <image class='nav_switch' src='/images/nav_switch.png' mode='widthFix' bindtap='tap_nav_switch'></image>
     <view class='nav_title'>
@@ -17,31 +20,28 @@
 
   <scroll-view scroll-y class='scroll_body'>
     <view class='body'>
-      <view class='item'>1</view>
-      <view class='item'>2</view>
-      <view class='item'>3</view>
-      <view class='item'>4</view>
-      <view class='item'>5</view>
-      <view class='item'>1</view>
-      <view class='item'>2</view>
-      <view class='item'>3</view>
-      <view class='item'>4</view>
-      <view class='item'>5</view>
-      <view class='item'>1</view>
-      <view class='item'>2</view>
-      <view class='item'>3</view>
-      <view class='item'>4</view>
-      <view class='item'>5</view>
-      <view class='item'>1</view>
-      <view class='item'>2</view>
-      <view class='item'>3</view>
-      <view class='item'>4</view>
-      <view class='item'>5</view>
-      <view class='item'>1</view>
-      <view class='item'>2</view>
-      <view class='item'>3</view>
-      <view class='item'>4</view>
-      <view class='item'>5</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">
+        <image class='item_image' src='/images/linway.png' mode='widthFix'></image>
+        <text>{{test}}</text>
+      </view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">2</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">3</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">4</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">5</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">6</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">7</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">8</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">9</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">10</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">11</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">12</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">13</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">14</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">15</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">16</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">17</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">18</view>
+      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">20</view>
     </view>
     
   </scroll-view>

@@ -1,4 +1,6 @@
 // pages/product/product.js
+const app = getApp()
+
 Page({
 
   /**
@@ -8,24 +10,21 @@ Page({
     brands: [
       {
         id: 0,
-        name: '',
-      },
-      {
-        id: 1,
         name: '圣兹',
       },
       {
-        id: 2,
+        id: 1,
         name: '罗曼可',
       },
       {
-        id: 3,
+        id: 2,
         name: '金点',
       }
     ],
-    curId: 1,
-    curIndex: 1,
-    open: false
+    curId: 0,
+    curIndex: 0,
+    open: false,
+    test: app.globalData.test
   },
 
   /**
@@ -86,14 +85,12 @@ Page({
 
   switchBrand: function (e) {
     let id = e.target.dataset.id;
-    if (id > 0) {
-      let index = parseInt(e.target.dataset.index);
-      this.setData({
-        curId: id,
-        curIndex: index,
-        open: false
-      })
-    }
+    let index = parseInt(e.target.dataset.index);
+    this.setData({
+      curId: id,
+      curIndex: index,
+      open: false
+    })
   },
 
   tap_nav_switch: function (e) {
@@ -109,5 +106,16 @@ Page({
         open: true
       })
     }
+  },
+
+  close_nav: function (e) {
+    console.log("close_nav");
+    this.setData({
+      open: false
+    })
+  },
+
+  tap_item: function (e) {
+    console.log("tap_item");
   }
 })

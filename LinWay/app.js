@@ -21,6 +21,29 @@ App({
 
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    products: [
+      {
+        brand_id: 0,
+        brand_name: '圣兹',
+        series:[
+          {
+            series_id:0,
+            series_name: '',
+            items: {
+              
+            }
+          }
+        ]
+      },
+      {
+        brand_id: 1,
+        brand_name: '罗曼可',
+      },
+      {
+        brand_id: 2,
+        brand_name: '金点',
+      }
+    ]
   }
 })

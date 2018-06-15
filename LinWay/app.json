@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/linway/linway",
     "pages/product/product",
+    "pages/linway/linway",
     "pages/contact/contact"
   ],
   "window": {
