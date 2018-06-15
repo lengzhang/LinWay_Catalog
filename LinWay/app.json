@@ -1,13 +1,14 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
+  "pages": [
+    "pages/linway/linway",
+    "pages/product/product",
+    "pages/contact/contact"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#dddddd",
@@ -16,19 +17,19 @@
     "backgroundColor": "#ffffff",
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/linway/linway",
         "text": "凌威",
         "iconPath": "images/凌威灰色.png",
         "selectedIconPath": "images/凌威红色.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/product/product",
         "text": "产品",
         "iconPath": "images/product_gray.png",
         "selectedIconPath": "images/product_red.png"
       },
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/contact/contact",
         "text": "联系",
         "iconPath": "images/smile_gray.png",
         "selectedIconPath": "images/smile_red.png"
