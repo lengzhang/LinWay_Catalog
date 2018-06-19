@@ -1,0 +1,157 @@
+/* pages/item/item.wxss */
+
+.main_page {
+  position: fixed;
+  top: 0%;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+  padding: 0%;
+}
+
+.swiper {
+  width: 100%;
+  height: 400rpx;
+
+  background-color: #ffffff;
+}
+
+.swiper image {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #f5f5f5;
+
+  padding: 0%;
+}
+
+.main_page .name_container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  background-color: #ffffff;
+
+  padding: 2%;
+}
+
+.main_page .name_container .name {
+  font-style: normal;
+  font-size: large;
+  font-weight: bold;
+
+  margin-bottom: 2%;
+}
+
+.main_page .name_container .brand_series {
+  font-style: italic;
+  font-size: medium;
+  font-weight: lighter;
+}
+
+.main_page .parameters_container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  background-color: #ffffff;
+
+  margin-top: 2%;
+}
+
+.main_page .parameters_container view {
+  padding: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.main_page .parameters_container .second {
+  border-top: solid;
+  border-top-width: thin;
+  border-top-color: #f5f5f5;
+}
+
+.main_page .detail_container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  background-color: #ffffff;
+
+  margin-top: 2%;
+}
+
+.main_page .detail_container text {
+  font-style: normal;
+  font-size: medium;
+  font-weight: bold;
+
+  padding-bottom: 1%;
+  margin: 2%;
+
+  border-bottom: solid;
+  border-bottom-width: thin;
+  border-bottom-color: #000000;
+}
+
+.main_page .detail_container image {
+  width: 100%;
+}
+
+.sub_page {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+  padding: 0%;
+
+  transition: All 0.4s ease; 
+  -webkit-transition: All 0.4s ease;
+}
+
+.sub_page.shift {
+  transform: rotate(0deg) scale(1) translate(0%,100%);
+  -webkit-transform: rotate(0deg) scale(1) translate(0%,100%); 
+}
+
+.sub_page .title {
+  font-style: normal;
+  font-size: medium;
+  font-weight: bold;
+
+  align-self: center;
+  text-align: center;
+
+  width: 100%;
+
+  background-color: #f5f5f5;
+  padding: 5%;
+}

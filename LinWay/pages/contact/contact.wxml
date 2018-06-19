@@ -1,5 +1,5 @@
 <!--pages/contact/contact.wxml-->
-<image  class='head_image' src='https://linway-1256311343.cos.ap-guangzhou.myqcloud.com/contact/contact_us.jpg' mode='widthFix'></image>
+<image  class='head_image' src="{{contact_image}}" mode='widthFix'></image>
 
 <view class='container' wx:for="{{list}}" wx:key="key">
   <text class='item_key'>{{item.key}}</text>

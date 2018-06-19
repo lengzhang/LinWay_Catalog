@@ -2,7 +2,8 @@
   "pages": [
     "pages/product/product",
     "pages/linway/linway",
-    "pages/contact/contact"
+    "pages/contact/contact",
+    "pages/item/item"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -19,20 +20,20 @@
       {
         "pagePath": "pages/linway/linway",
         "text": "凌威",
-        "iconPath": "images/凌威灰色.png",
-        "selectedIconPath": "images/凌威红色.png"
+        "iconPath": "images/icon/linway_gray.png",
+        "selectedIconPath": "images/icon/linway_red.png"
       },
       {
         "pagePath": "pages/product/product",
         "text": "产品",
-        "iconPath": "images/product_gray.png",
-        "selectedIconPath": "images/product_red.png"
+        "iconPath": "images/icon/product_gray.png",
+        "selectedIconPath": "images/icon/product_red.png"
       },
       {
         "pagePath": "pages/contact/contact",
         "text": "联系",
-        "iconPath": "images/smile_gray.png",
-        "selectedIconPath": "images/smile_red.png"
+        "iconPath": "images/icon/smile_gray.png",
+        "selectedIconPath": "images/icon/smile_red.png"
       }
     ],
     "position": "bottom"

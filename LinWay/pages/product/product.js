@@ -7,31 +7,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    brands: [
-      {
-        id: 0,
-        name: '圣兹',
-      },
-      {
-        id: 1,
-        name: '罗曼可',
-      },
-      {
-        id: 2,
-        name: '金点',
-      }
-    ],
-    curId: 0,
-    curIndex: 0,
+    cur_id: 0,
     open: false,
-    test: app.globalData.test
+    test: app.globalData.test,
+    products: '',
+    scroll_top: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      products: app.globalData.products
+    })
+    wx.setNavigationBarTitle({
+      title: '产品'
+    })
   },
 
   /**
@@ -84,24 +76,22 @@ Page({
   },
 
   switchBrand: function (e) {
-    let id = e.target.dataset.id;
-    let index = parseInt(e.target.dataset.index);
+    let id = e.currentTarget.dataset.id;
+    let top = (this.data.scroll_top == 0 ? -1 : 0);
     this.setData({
-      curId: id,
-      curIndex: index,
-      open: false
+      cur_id: id,
+      open: false,
+      scroll_top: top
     })
   },
 
   tap_nav_switch: function (e) {
     if (this.data.open) {
-      console.log("true");
       this.setData({
         open: false
       })
     }
     else {
-      console.log("false");
       this.setData({
         open: true
       })
@@ -109,13 +99,14 @@ Page({
   },
 
   close_nav: function (e) {
-    console.log("close_nav");
     this.setData({
       open: false
     })
   },
 
   tap_item: function (e) {
-    console.log("tap_item");
+    wx.navigateTo({
+      url: "/pages/item/item?brand_id=" + e.currentTarget.dataset.brand_id + "&series_id=" + e.currentTarget.dataset.series_id + "&item_id=" + e.currentTarget.dataset.item_id
+    })
   }
 })

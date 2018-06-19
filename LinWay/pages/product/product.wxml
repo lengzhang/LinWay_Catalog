@@ -2,9 +2,10 @@
 <view class='lower'>
   <scroll-view scroll-y class='lower_scroll'>
     <view class="lower_item"></view>
-    <block wx:for="{{brands}}" wx:key="id">
-      <view class="lower_item {{curId == item.id ? 'active' : ''}}" bindtap='switchBrand' data-index="{{index}}" data-id="{{item.id}}">
-        {{item.name}}
+    <block wx:for="{{products}}" wx:key="brand_id">
+      <view class="lower_item {{cur_id == item.brand_id ? 'active' : ''}}" bindtap='switchBrand' data-id="{{item.brand_id}}">
+        <image style='width: 50%' src="{{item.logo}}" mode='widthFix'></image>
+        <text>{{item.brand_name}}</text>
       </view>
     </block>
   </scroll-view>
@@ -12,39 +13,27 @@
 
 <view class="upper {{open ? 'shift' : ''}}" bindtap="{{open ? 'close_nav' : ''}}">
   <view class='head'>
-    <image class='nav_switch' src='/images/nav_switch.png' mode='widthFix' bindtap='tap_nav_switch'></image>
+    <image class='nav_switch' src='/images/icon/nav_switch.png' mode='widthFix' bindtap='tap_nav_switch'></image>
     <view class='nav_title'>
-      {{brands[curIndex].name}}
+      {{products[cur_id].brand_name}}
     </view>
   </view>
 
-  <scroll-view scroll-y class='scroll_body'>
+  <scroll-view class='scroll_body' scroll-y="{{!open}}" enable-back-to-top="{{!open}}" scroll-top="{{scroll_top}}" scroll-with-animation>
     <view class='body'>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">
-        <image class='item_image' src='/images/linway.png' mode='widthFix'></image>
-        <text>{{test}}</text>
-      </view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">2</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">3</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">4</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">5</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">6</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">7</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">8</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">9</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">10</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">11</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">12</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">13</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">14</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">15</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">16</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">17</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">18</view>
-      <view class='item_box' bindtap="{{open ? '' : 'tap_item'}}">20</view>
+      <block wx:for="{{products[cur_id].series}}" wx:key="series_id" wx:for-item="series">
+        <view class='series_box'>
+          <text class='series_title'>{{series.series_name}}</text>
+          <view class='items_box'>
+            <block wx:for="{{series.items}}" wx:key="items_id" wx:for-item="items">
+              <view class='item' bindtap="{{open ? '' : 'tap_item'}}" data-brand_id='{{cur_id}}' data-series_id='{{series.series_id}}' data-item_id='{{items.item_id}}'>
+                <image class='item_image' src="{{items.display_image}}" mode='widthFix'></image>
+                <text class='item_text'>{{items.item_name}}</text>
+              </view>
+            </block>
+          </view>
+        </view>
+      </block>
     </view>
-    
-  </scroll-view>
-
-  
+  </scroll-view>  
 </view>

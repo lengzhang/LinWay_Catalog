@@ -1,8 +1,8 @@
 <!--pages/linway/linway.wxml-->
-<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" vertical="{{vertical}}">
+<swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" vertical="{{vertical}}">
   <view wx:for="{{imageUrls}}" wx:key="*this">
     <swiper-item>
-      <image class='slide_image' src="{{item}}" mode='widthFix'></image>
+      <image src="{{item}}" mode='aspectFit'></image>
     </swiper-item>
   </view>
 </swiper>

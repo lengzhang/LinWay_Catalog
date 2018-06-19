@@ -35,14 +35,17 @@ Page({
         value: 'https://gzlinway.1688.com'
       },
     ],
-    selectable: true
+    selectable: true,
+    contact_image: 'https://linway-1256311343.cos.ap-guangzhou.myqcloud.com/contact/contact_us.jpg'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.setNavigationBarTitle({
+      title: '联系我们'
+    })
   },
 
   /**
